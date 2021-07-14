@@ -9,12 +9,16 @@
     v-bind:todos="todos"
     @remove-todo="removeTodo"
     />
+    <HelloWorld />
   </div>
 </template>
 
 <script>
+
 import TodoList from '@/components/TodoList'
 import AddTodo from '@/components/AddTodo'
+import HelloWorld from "@/components/HelloWorld";
+
 export default {
   name: 'App',
   data(){
@@ -27,7 +31,7 @@ export default {
     }
   },
   components: {
-    TodoList, AddTodo
+    TodoList, AddTodo, HelloWorld
   },
   methods: {
     removeTodo(id) {
